@@ -1,0 +1,113 @@
+/* src/styles/window-base.css */
+/* Base styles for Tauri window containers */
+
+/* ============================================================
+   Window Container Styles
+   Applied to all popup windows (Lookup, Translation, OCR)
+   ============================================================ */
+
+/* Transparent background for frameless windows */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* Root container for popup windows */
+.window-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+/* Drag region for frameless windows */
+.window-drag-handle {
+  -webkit-app-region: drag;
+  cursor: grab;
+}
+
+.window-drag-handle:active {
+  cursor: grabbing;
+}
+
+/* Prevent drag on interactive elements */
+.window-drag-handle button,
+.window-drag-handle input,
+.window-drag-handle select,
+.window-drag-handle textarea,
+.window-drag-handle a,
+.window-drag-handle [role="button"] {
+  -webkit-app-region: no-drag;
+}
+
+/* ============================================================
+   Main Window Specific Styles
+   ============================================================ */
+
+.main-window {
+  background: var(--color-bg-base);
+}
+
+/* ============================================================
+   Popup Window Specific Styles
+   ============================================================ */
+
+.popup-window {
+  background: var(--color-bg-base);
+  border-radius: 28px;
+  box-shadow: 0 14px 34px rgba(44, 42, 40, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+/* Content area within popup windows */
+.popup-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   OCR Crop Mode Styles
+   ============================================================ */
+
+.ocr-crop-mode {
+  position: fixed;
+  inset: 0;
+  cursor: crosshair;
+  user-select: none;
+}
+
+.ocr-crop-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.32);
+  pointer-events: none;
+}
+
+.ocr-crop-selection {
+  position: absolute;
+  border: 2px solid var(--color-brand);
+  border-radius: 12px;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* ============================================================
+   Transition Utilities for Window State Changes
+   ============================================================ */
+
+.window-transition-fade {
+  transition: opacity var(--duration-normal) var(--ease-standard);
+}
+
+.window-transition-slide {
+  transition: transform var(--duration-normal) var(--ease-standard);
+}

@@ -1,0 +1,65 @@
+/* src/styles/index.css */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Project style layers */
+@import './tokens.css';
+@import './typography.css';
+@import './motion.css';
+@import './window-base.css';
+@import './animations.css';
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--color-bg-base);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  }
+
+  #root {
+    height: 100%;
+  }
+
+  ::selection {
+    background: rgba(217, 138, 108, 0.18);
+    color: var(--color-text-primary);
+  }
+
+  :focus-visible {
+    outline: 2px solid rgba(217, 138, 108, 0.32);
+    outline-offset: 2px;
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(107, 101, 96, 0.25); border-radius: 999px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(107, 101, 96, 0.38); }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .drag-region { -webkit-app-region: drag; }
+  .no-drag-region { -webkit-app-region: no-drag; }
+}

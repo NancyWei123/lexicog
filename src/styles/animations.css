@@ -1,0 +1,192 @@
+/* src/styles/animations.css */
+
+/* ============================================================
+   Animation Definitions
+   Streaming and State Transition Animations
+   ============================================================ */
+
+/* ----------------------------------------
+   Shimmer Effect
+   ---------------------------------------- */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ----------------------------------------
+   Streaming Text Animations
+   ---------------------------------------- */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes characterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(4px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ----------------------------------------
+   Toast Animations
+   ---------------------------------------- */
+@keyframes toastSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toastSlideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.95);
+  }
+}
+
+/* ----------------------------------------
+   Linear Progress (Indeterminate)
+   ---------------------------------------- */
+@keyframes linearProgress {
+  0% {
+    transform: translateX(-60%) scaleX(0.35);
+  }
+  50% {
+    transform: translateX(10%) scaleX(0.65);
+  }
+  100% {
+    transform: translateX(140%) scaleX(0.35);
+  }
+}
+
+/* ----------------------------------------
+   Subtle Pulse
+   ---------------------------------------- */
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 1.5s ease-in-out infinite;
+}
+
+/* ----------------------------------------
+   Focus Ring Animation
+   ---------------------------------------- */
+@keyframes focusRingExpand {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 40%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 15%, transparent);
+  }
+}
+
+/* ----------------------------------------
+   Utility Classes
+   ---------------------------------------- */
+.animate-shimmer {
+  animation: shimmer 1.8s var(--ease-standard) infinite;
+}
+
+.animate-fade-slide-up {
+  animation: fadeSlideUp var(--duration-normal) var(--ease-standard) forwards;
+}
+
+.animate-character-reveal {
+  animation: characterReveal var(--duration-fast) var(--ease-standard) forwards;
+}
+
+.animate-toast-in {
+  animation: toastSlideIn var(--duration-slow) var(--ease-standard) forwards;
+}
+
+.animate-toast-out {
+  animation: toastSlideOut var(--duration-fast) var(--ease-standard) forwards;
+}
+
+.animate-linear-progress {
+  animation: linearProgress 1.35s var(--ease-standard) infinite;
+}
+
+@keyframes chipRippleFloat {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  22% {
+    transform: translate3d(
+      var(--chip-ripple-x1, 1px),
+      var(--chip-ripple-y1, -1px),
+      0
+    ) rotate(var(--chip-ripple-tilt1, -0.45deg));
+  }
+  48% {
+    transform: translate3d(
+      var(--chip-ripple-x2, -1px),
+      var(--chip-ripple-y2, 1px),
+      0
+    ) rotate(var(--chip-ripple-tilt2, 0.4deg));
+  }
+  72% {
+    transform: translate3d(
+      var(--chip-ripple-x3, 0.5px),
+      var(--chip-ripple-y3, 0.25px),
+      0
+    ) rotate(var(--chip-ripple-tilt3, -0.2deg));
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
+.chip-ripple-surface {
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .chip-ripple-field:hover .chip-ripple-surface {
+    animation: chipRippleFloat var(--chip-ripple-duration, 1800ms) ease-in-out infinite;
+    animation-delay: var(--chip-ripple-delay, 0ms);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip-ripple-field:hover .chip-ripple-surface {
+    animation: none;
+  }
+}
+
+/* Stagger delay utilities for streaming text */
+.stagger-delay-1 { animation-delay: 20ms; }
+.stagger-delay-2 { animation-delay: 40ms; }
+.stagger-delay-3 { animation-delay: 60ms; }
+.stagger-delay-4 { animation-delay: 80ms; }
+.stagger-delay-5 { animation-delay: 100ms; }

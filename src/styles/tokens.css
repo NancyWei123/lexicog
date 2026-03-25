@@ -1,0 +1,164 @@
+/* src/styles/tokens.css — Warm Cream tokens (Light only) */
+
+:root {
+  --radius: 8px;
+
+  /* Claude-inspired warm paper palette */
+  --color-bg-base: #fdfbf7;
+  --color-bg-sidebar: #f5f3ec;
+  --color-bg-container: #fffdfa;
+  --color-bg-surface-secondary: #f7f4ee;
+  --color-bg-surface-tertiary: #f1ece4;
+  --color-border: rgba(0, 0, 0, 0.05);
+  --color-border-secondary: rgba(0, 0, 0, 0.03);
+  --color-text-primary: #2c2a28;
+  --color-text-secondary: #7a7571;
+  --color-text-tertiary: #a29b95;
+  --color-brand: #c96442;
+  --color-brand-hover: #b5563a;
+  --color-brand-bg: rgba(217, 138, 108, 0.12);
+  --color-success: #52b788;
+  --color-warning: #e09f3e;
+  --color-error: #d64045;
+  --color-info: #5e8db0;
+  --color-field-bg: rgba(0, 0, 0, 0.03);
+  --color-field-hover: rgba(0, 0, 0, 0.045);
+  --color-focus-ring: rgba(217, 138, 108, 0.24);
+  --color-panel-shadow: 0 1px 0 rgba(255, 255, 255, 0.62),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+  --color-panel-shadow-raised: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+
+  --chart-1: #d98a6c;
+  --chart-2: #8ba888;
+  --chart-3: #7b8c9c;
+  --chart-4: #c48f90;
+  --chart-5: #c89b7b;
+
+  /* Compatibility tokens used by utility classes */
+  --background: var(--color-bg-base);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-bg-container);
+  --card-foreground: var(--color-text-primary);
+  --popover: var(--color-bg-container);
+  --popover-foreground: var(--color-text-primary);
+  --primary: var(--color-brand);
+  --primary-foreground: #ffffff;
+  --secondary: var(--color-bg-surface-secondary);
+  --secondary-foreground: var(--color-text-primary);
+  --muted: var(--color-bg-surface-secondary);
+  --muted-foreground: var(--color-text-secondary);
+  --accent: var(--color-bg-surface-tertiary);
+  --accent-foreground: var(--color-text-primary);
+  --destructive: var(--color-error);
+  --destructive-foreground: #ffffff;
+  --border: var(--color-border);
+  --input: var(--color-border-secondary);
+  --ring: var(--color-brand);
+
+  --success: var(--color-success);
+  --success-foreground: #ffffff;
+  --warning: var(--color-warning);
+  --warning-foreground: #ffffff;
+
+  --ink-primary: var(--color-text-primary);
+  --ink-secondary: var(--color-text-secondary);
+  --ink-tertiary: var(--color-text-tertiary);
+  --ink-disabled: var(--color-text-tertiary);
+
+  --surface: var(--color-bg-base);
+  --surface-container: var(--color-bg-surface-secondary);
+  --surface-container-high: var(--color-bg-container);
+  --surface-container-low: var(--color-bg-surface-secondary);
+  --surface-dim: var(--color-bg-surface-tertiary);
+
+  --inverse-surface: #2f2b28;
+  --inverse-on-surface: #faf9f7;
+  --skeleton-shimmer: rgba(255, 255, 255, 0.65);
+
+  --shadow-sm: 0 1px 2px rgba(26, 26, 26, 0.06);
+  --shadow-md: 0 4px 14px rgba(26, 26, 26, 0.08);
+  --shadow-lg: 0 8px 22px rgba(26, 26, 26, 0.1);
+
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+  --z-tooltip: 500;
+
+  /* Review session animations */
+  --typing-speed: 18ms;
+
+  --sidebar-width: 156px;
+  --sidebar-width-collapsed: 56px;
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-ink-primary: var(--ink-primary);
+  --color-ink-secondary: var(--ink-secondary);
+  --color-ink-tertiary: var(--ink-tertiary);
+  --color-ink-disabled: var(--ink-disabled);
+
+  --color-surface: var(--surface);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-low: var(--surface-container-low);
+
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", Menlo, Consolas, monospace;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}

@@ -1,0 +1,8 @@
+/* src/styles/motion.css — Motion tokens & timing */
+
+/* Standard animations are handled by tw-animate-css.
+   Project-specific keyframes live in animations.css.
+   Duration and easing tokens are defined in tokens.css:
+     --duration-fast, --duration-normal, --duration-slow
+     --ease-standard
+*/

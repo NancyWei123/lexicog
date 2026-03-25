@@ -1,0 +1,35 @@
+/* src/styles/typography.css — Typography system */
+
+@layer base {
+  body {
+    font-size: 14px;
+    line-height: 1.65;
+    font-weight: 400;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .prose-output {
+    font-size: 16px;
+    line-height: 1.72;
+    max-width: 80ch;
+  }
+
+  .font-editorial {
+    font-family: var(--font-serif);
+    letter-spacing: -0.015em;
+  }
+
+  .editorial-number {
+    font-family: var(--font-serif);
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    letter-spacing: -0.03em;
+  }
+}

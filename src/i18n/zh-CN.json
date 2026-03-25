@@ -1,0 +1,258 @@
+{
+    "common": {
+        "stop": "停止",
+        "stopGenerating": "停止生成",
+        "copyToClipboard": "复制到剪贴板",
+        "copied": "已复制!",
+        "loading": "思考中...",
+        "playAudio": "播放语音",
+        "hide": "隐藏",
+        "save": "保存",
+        "saving": "保存中...",
+        "loadingContent": "加载中...",
+        "none": "—",
+        "blankPlaceholder": "…",
+        "showPassword": "显示密码",
+        "hidePassword": "隐藏密码",
+        "select": "选择",
+        "delete": "删除"
+    },
+    "error": {
+        "genericTitle": "发生错误",
+        "genericMessage": "发生错误",
+        "lookupFailed": "查词失败",
+        "translationFailed": "翻译失败",
+        "segmentationFailed": "分词失败",
+        "ocrFailed": "OCR 失败",
+        "analysisFailed": "文本分析失败",
+        "failedToSetLanguage": "设置语言失败",
+        "failedToUpdateModel": "更新模型失败",
+        "modelUpdated": "模型已更新",
+        "failedToUpdateLanguage": "更新语言失败",
+        "failedToParseResponse": "解析结果失败",
+        "hideWindowFailed": "隐藏窗口失败"
+    },
+    "lookup": {
+        "title": "查词",
+        "goBack": "后退",
+        "goForward": "前进",
+        "noDisciplineEntries": "该领域下暂无词条",
+        "representativeEntry": "代表性词条"
+    },
+    "translate": {
+        "title": "翻译",
+        "view": {
+            "translation": "翻译",
+            "segmentation": "分词"
+        }
+    },
+    "configures": {
+        "uiLanguage": {
+            "label": "界面语言",
+            "options": {
+                "en": "English",
+                "zh-CN": "简体中文"
+            }
+        },
+        "targetLanguage": {
+            "lookup": "查词目标语言",
+            "translation": "翻译目标语言",
+            "options": {
+                "zh-CN": "简体中文",
+                "en": "英语",
+                "jp": "日语",
+                "es": "西班牙语",
+                "fr": "法语",
+                "de": "德语",
+                "it": "意大利语",
+                "ru": "俄语",
+                "pt": "葡萄牙语",
+                "ko": "韩语",
+                "vi": "越南语",
+                "th": "泰语",
+                "el": "希腊语"
+            }
+        },
+        "models": {
+            "textGeneration": "文本生成",
+            "textToSpeech": "语音合成 (TTS)",
+            "ocr": "文字识别 (OCR)",
+            "noVendorConfigured": "请先添加服务商 API 密钥",
+            "noModelsAvailable": "暂无可用模型",
+            "attribute": {
+                "vendor": "服务商",
+                "id": "模型 ID",
+                "inputContextWindow": "输入上下文窗口",
+                "outputContextWindow": "输出上下文窗口",
+                "maxOutput": "最大输出 Token",
+                "inputPricePer1MTokens": "输入价格 (每百万 Token)",
+                "outputPricePer1MTokens": "输出价格 (每百万 Token)"
+            }
+        },
+        "vendors": {
+            "label": "模型服务商",
+            "authentication": {
+                "apiKey": "API 密钥",
+                "apiBaseURL": "API 基础地址"
+            }
+        },
+        "shortcuts": {
+            "label": "快捷键",
+            "translate": "文本翻译",
+            "lookup": "词条查询",
+            "ocr": "文字识别",
+            "analysis": "文本分析",
+            "recording": "请按键...",
+            "validationError": "需要至少一个修饰键 (Ctrl, Alt, Shift, Cmd) 加上一个普通键。"
+        }
+    },
+    "browsingHistory": {
+        "label": "历史记录",
+        "tabs": {
+            "marked": "已收藏",
+            "all": "所有历史"
+        },
+        "searchPlaceholder": "输入前缀搜索...",
+        "export": "导出已收藏词条"
+    },
+    "about": {
+        "label": "关于",
+        "appName": "LexiCog",
+        "description": "用于词条查询、翻译、OCR 与词汇复习的桌面工具。",
+        "version": "版本 {{version}}",
+        "releaseLog": "更新日志",
+        "checkForUpdates": "检查更新",
+        "contact": "联系开发者"
+    },
+    "translateText": {
+        "selectTargetLanguage": "目标语言",
+        "toggleOriginal": "显示/隐藏原文",
+        "replaceSelected": "替换选中文本",
+        "waitingForText": "等待文本...",
+        "sourceTextPlaceholder": "输入或粘贴要翻译的文本...",
+        "showSource": "显示原文",
+        "translate": "翻译",
+        "lexicalEntries": {
+            "title": "高学习价值表达",
+            "description": "从当前文本中筛出的高价值源语言表达及其译文对应表达。",
+            "source": "原文表达",
+            "target": "译文对应"
+        }
+    },
+    "lexicalEntry": {
+        "idle": {
+            "title": "查词就绪",
+            "description": "在任意应用中选中文字，触发快捷键即可查询解析。",
+            "shortcutHint": "快捷键"
+        },
+        "mark": "收藏",
+        "unmark": "取消收藏",
+        "meta": {
+            "source": "源语言",
+            "target": "目标语言",
+            "normalized": "原形"
+        },
+        "phonetic": {
+            "ipa": "国际音标",
+            "romanization": "罗马音"
+        },
+        "partOfSpeech": {
+            "label": "词性",
+            "forms": {
+                "label": "词形变化",
+                "comment": "备注",
+                "formsList": "变体"
+            },
+            "entries": {
+                "definition": "定义",
+                "sourceDefinition": "源语言定义",
+                "examples": "例句",
+                "synonyms": "同义词",
+                "usageNotes": "用法说明"
+            }
+        },
+        "refresh": "重新生成解析"
+    },
+    "analysis": {
+        "title": "文本分析",
+        "correctedText": "修正后文本",
+        "noErrors": "未发现错误",
+        "errorCount": "{{count}} 处问题",
+        "original": "原文",
+        "correction": "修正",
+        "categories": {
+            "orthographic": "拼写与标点",
+            "lexical": "用词与搭配",
+            "grammatical": "语法与句法",
+            "semantic": "语义与逻辑",
+            "pragmatic": "风格与语气"
+        }
+    },
+    "ocr": {
+        "instruction": "框选区域以识别文字",
+        "exit": "退出",
+        "title": "OCR",
+        "cropTitle": "框选区域",
+        "confirm": "确认",
+        "recrop": "重新框选",
+        "waitingForScreenshot": "等待截图...",
+        "recropFromResult": "点击重新框选",
+        "translate": "翻译",
+        "analyze": "解析"
+    },
+    "main": {
+        "tabs": {
+            "configure": "配置",
+            "lookupHistory": "查词历史",
+            "review": "复习",
+            "about": "关于"
+        },
+        "nav": {
+            "configuration": "配置",
+            "reviewHistory": "复习与历史"
+        },
+        "history": {
+            "allLanguages": "全部语言",
+            "allDisciplines": "全部领域",
+            "noEntriesFound": "未找到条目",
+            "search": "搜索",
+            "backToChart": "返回总览",
+            "clickToExplore": "点击学科弧形以探索",
+            "flatEntries": "义项数",
+            "filteredDiscipline": "领域筛选",
+            "clearDiscipline": "清除领域筛选",
+            "loadingRepresentatives": "正在加载 {{discipline}} 的代表词条"
+        },
+        "settings": {
+            "title": "设置",
+            "model": "模型",
+            "targetLanguages": "目标语言"
+        },
+        "review": {
+            "title": "复习与历史",
+            "session": "复习会话",
+            "selectLanguagePlaceholder": "选择语言",
+            "startSession": "开始会话",
+            "allDone": "全部完成！没有更多待复习的内容。",
+            "emptyState": "选择语言并开始复习会话",
+            "correct": "正确！",
+            "tryAgain": "再试一次",
+            "vocabularyHint": "{{count}} 个待复习词汇",
+            "roles": {
+                "user": "你",
+                "assistant": "助手",
+                "system": "系统"
+            }
+        },
+        "notifications": {
+            "vendorSaved": "{{vendor}} 配置已保存",
+            "vendorSaveFailed": "保存 {{vendor}} 配置失败",
+            "shortcutUpdated": "快捷键已更新",
+            "shortcutUpdateFailed": "更新快捷键失败",
+            "loadHistoryFailed": "加载历史失败：{{error}}",
+            "loadDisciplineOverviewFailed": "构建领域总览失败",
+            "startSessionFailed": "启动会话失败：{{error}}",
+            "validateFailed": "校验失败"
+        }
+    }
+} 

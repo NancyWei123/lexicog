@@ -1,0 +1,61 @@
+[package]
+name = "lexicog"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "lexicog_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri-plugin-clipboard-manager = "2"
+tauri-plugin-store = "2"
+
+
+sqlx = { version = "0.8.6", features = ["chrono", "runtime-tokio-rustls", "sqlite"] }
+tokio = { version = "1.47.1", features = ["full"] }
+anyhow = "1.0.98"
+chrono = "0.4.41"
+uuid = { version = "1.18.0", features = ["v4"] }
+xcap = "0.7.0"
+base64 = "0.22.1"
+global-hotkey = "0.7.0"
+enigo = "0.6.1"
+tauri-plugin-fs = "2"
+tauri-plugin-log = "~2.8"
+log = "0.4.27"
+tauri-plugin-http = "2"
+reqwest = { version = "0.12.23", features = ["json", "stream"] }
+tauri-plugin-dialog = "~2.6"
+sys-locale = "0.3.2"
+schemars = "1.1.0"
+futures-util = "0.3.31"
+sha2 = "0.10.9"
+hex = "0.4.3"
+tokio-util = "0.7.17"
+image = "0.25.9"
+tiktoken-rs = "0.9.1"
+strsim = "0.11.1"
+
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-global-shortcut = "2"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.6"
+objc2-app-kit = "0.3.2"
+
+tauri-nspanel = { git = "https://github.com/ahkohd/tauri-nspanel", branch = "v2.1" }

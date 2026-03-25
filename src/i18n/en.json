@@ -1,0 +1,258 @@
+{
+	"common": {
+		"stop": "Stop",
+		"stopGenerating": "Stop generating",
+		"copyToClipboard": "Copy to Clipboard",
+		"copied": "Copied!",
+		"loading": "Thinking...",
+		"playAudio": "Play audio",
+		"hide": "Hide",
+		"save": "Save",
+		"saving": "Saving...",
+		"loadingContent": "Loading...",
+		"none": "—",
+		"blankPlaceholder": "…",
+		"showPassword": "Show password",
+		"hidePassword": "Hide password",
+		"select": "Select",
+		"delete": "Delete"
+	},
+	"error": {
+		"genericTitle": "Something went wrong",
+		"genericMessage": "An error occurred",
+		"lookupFailed": "Lookup failed",
+		"translationFailed": "Translation failed",
+		"segmentationFailed": "Segmentation failed",
+		"ocrFailed": "OCR failed",
+		"analysisFailed": "Text analysis failed",
+		"failedToSetLanguage": "Failed to set language",
+		"failedToUpdateModel": "Failed to update model",
+		"modelUpdated": "Model updated successfully",
+		"failedToUpdateLanguage": "Failed to update language",
+		"failedToParseResponse": "Failed to parse response",
+		"hideWindowFailed": "Failed to hide window"
+	},
+	"lookup": {
+		"title": "Lookup",
+		"goBack": "Go back",
+		"goForward": "Go forward",
+		"noDisciplineEntries": "No entries found in this discipline",
+		"representativeEntry": "Representative entry"
+	},
+	"translate": {
+		"title": "Translate",
+		"view": {
+			"translation": "Translation",
+			"segmentation": "Segmentation"
+		}
+	},
+	"configures": {
+		"uiLanguage": {
+			"label": "Interface Language",
+			"options": {
+				"en": "English",
+				"zh-CN": "Simplified Chinese"
+			}
+		},
+		"targetLanguage": {
+			"lookup": "For Lexical Entry Lookup",
+			"translation": "For Translation",
+			"options": {
+				"zh-CN": "Simplified Chinese",
+				"en": "English",
+				"jp": "Japanese",
+				"es": "Spanish",
+				"fr": "French",
+				"de": "German",
+				"it": "Italian",
+				"ru": "Russian",
+				"pt": "Portuguese",
+				"ko": "Korean",
+				"vi": "Vietnamese",
+				"th": "Thai",
+				"el": "Greek"
+			}
+		},
+		"models": {
+			"textGeneration": "Text Generation",
+			"textToSpeech": "Text to Speech",
+			"ocr": "OCR",
+			"noVendorConfigured": "Add a vendor API key first",
+			"noModelsAvailable": "No models available",
+			"attribute": {
+				"vendor": "Vendor",
+				"id": "Model ID",
+				"inputContextWindow": "Input Context Window",
+				"outputContextWindow": "Output Context Window",
+				"maxOutput": "Max Output Tokens",
+				"inputPricePer1MTokens": "Input Price (per 1M tokens)",
+				"outputPricePer1MTokens": "Output Price (per 1M tokens)"
+			}
+		},
+		"vendors": {
+			"label": "LLM Vendors",
+			"authentication": {
+				"apiKey": "API Key",
+				"apiBaseURL": "API Base URL"
+			}
+		},
+		"shortcuts": {
+			"label": "Shortcuts",
+			"translate": "Text Translation",
+			"lookup": "Lexical Entry Lookup",
+			"ocr": "OCR",
+			"analysis": "Text Analysis",
+			"recording": "Press keys...",
+			"validationError": "Requires at least one modifier (Ctrl, Alt, Shift, Cmd) + one key."
+		}
+	},
+	"browsingHistory": {
+		"label": "History",
+		"tabs": {
+			"marked": "Marked",
+			"all": "All History"
+		},
+		"searchPlaceholder": "Search by prefix...",
+		"export": "Export Marked Lexical Entries"
+	},
+	"about": {
+		"label": "About",
+		"appName": "LexiCog",
+		"description": "Desktop utility for lexical lookup, translation, OCR, and vocabulary review.",
+		"version": "Version {{version}}",
+		"releaseLog": "Release Notes",
+		"checkForUpdates": "Check for Updates",
+		"contact": "Contact Developer"
+	},
+	"translateText": {
+		"selectTargetLanguage": "Target Language",
+		"toggleOriginal": "Show/Hide Original",
+		"replaceSelected": "Replace Selected Text",
+		"waitingForText": "Waiting for text...",
+		"sourceTextPlaceholder": "Enter or paste text to translate...",
+		"showSource": "Show source text",
+		"translate": "Translate",
+		"lexicalEntries": {
+			"title": "Study-worthy expressions",
+			"description": "Selected source expressions with strong learning value in this passage.",
+			"source": "Source",
+			"target": "In translation"
+		}
+	},
+	"lexicalEntry": {
+		"idle": {
+			"title": "Lookup Ready",
+			"description": "Select any text in your apps and trigger the lookup to analyze it.",
+			"shortcutHint": "Shortcut"
+		},
+		"mark": "Mark",
+		"unmark": "Unmark",
+		"meta": {
+			"source": "Source Language",
+			"target": "Target Language",
+			"normalized": "Root Form"
+		},
+		"phonetic": {
+			"ipa": "IPA",
+			"romanization": "Romanization"
+		},
+		"partOfSpeech": {
+			"label": "Part of Speech",
+			"forms": {
+				"label": "Inflections",
+				"comment": "Note",
+				"formsList": "Variations"
+			},
+			"entries": {
+				"definition": "Definition",
+				"sourceDefinition": "Source Definition",
+				"examples": "Examples",
+				"synonyms": "Synonyms",
+				"usageNotes": "Usage Notes"
+			}
+		},
+		"refresh": "Regenerate Analysis"
+	},
+	"analysis": {
+		"title": "Text Analysis",
+		"correctedText": "Corrected Text",
+		"noErrors": "No errors found",
+		"errorCount": "{{count}} issue(s)",
+		"original": "Original",
+		"correction": "Correction",
+		"categories": {
+			"orthographic": "Spelling & Punctuation",
+			"lexical": "Word Choice & Collocation",
+			"grammatical": "Grammar & Syntax",
+			"semantic": "Meaning & Logic",
+			"pragmatic": "Style & Tone"
+		}
+	},
+	"ocr": {
+		"instruction": "Select an area to recognize text",
+		"exit": "Exit",
+		"title": "OCR",
+		"cropTitle": "Select area",
+		"confirm": "Confirm",
+		"recrop": "Re-crop",
+		"waitingForScreenshot": "Waiting for screenshot...",
+		"recropFromResult": "Click to re-crop",
+		"translate": "Translate",
+		"analyze": "Analyze"
+	},
+	"main": {
+		"tabs": {
+			"configure": "Configure",
+			"lookupHistory": "Lookup History",
+			"review": "Review",
+			"about": "About"
+		},
+		"nav": {
+			"configuration": "Configuration",
+			"reviewHistory": "Review & History"
+		},
+		"history": {
+			"allLanguages": "All languages",
+			"allDisciplines": "All disciplines",
+			"noEntriesFound": "No entries found",
+			"search": "Search",
+			"backToChart": "Back to overview",
+			"clickToExplore": "Click a discipline arc to explore",
+			"flatEntries": "Flat entries",
+			"filteredDiscipline": "Discipline filter",
+			"clearDiscipline": "Clear discipline filter",
+			"loadingRepresentatives": "Loading representative entries for {{discipline}}"
+		},
+		"settings": {
+			"title": "Settings",
+			"model": "Models",
+			"targetLanguages": "Target Languages"
+		},
+		"review": {
+			"title": "Review & History",
+			"session": "Review Session",
+			"selectLanguagePlaceholder": "Select language",
+			"startSession": "Start Session",
+			"allDone": "All done! No more items to review.",
+			"emptyState": "Select a language and start a review session",
+			"correct": "Correct!",
+			"tryAgain": "Try again",
+			"vocabularyHint": "{{count}} words to review",
+			"roles": {
+				"user": "You",
+				"assistant": "Assistant",
+				"system": "System"
+			}
+		},
+		"notifications": {
+			"vendorSaved": "{{vendor}} configuration saved",
+			"vendorSaveFailed": "Failed to save {{vendor}} configuration",
+			"shortcutUpdated": "Shortcut updated",
+			"shortcutUpdateFailed": "Failed to update shortcut",
+			"loadHistoryFailed": "Failed to load history: {{error}}",
+			"loadDisciplineOverviewFailed": "Failed to build the discipline overview",
+			"startSessionFailed": "Failed to start session: {{error}}",
+			"validateFailed": "Failed to validate"
+		}
+	}
+}
