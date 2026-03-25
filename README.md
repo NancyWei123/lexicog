@@ -44,6 +44,17 @@ To build a packaged app:
 npm run tauri build
 ```
 
+## macOS Install Note
+
+This project currently ships unsigned and non-notarized macOS builds. After copying `LexiCog.app` into `/Applications`, remove the quarantine flag manually:
+
+```bash
+sudo xattr -rd com.apple.quarantine /Applications/LexiCog.app
+```
+
+Without that step, macOS may show "`LexiCog` is damaged and can't be opened" for apps downloaded from GitHub Releases.
+
+
 ## First-Run Notes
 
 - Add at least one vendor API key in `Configure`.

@@ -173,7 +173,7 @@ function formatUpdateVersion(version: string): string {
 function AboutSection() {
   const { t } = useTranslation();
   const { notify } = useNotification();
-  const [appVersion, setAppVersion] = useState(import.meta.env.VITE_APP_VERSION || '0.1.0');
+  const [appVersion, setAppVersion] = useState<string>('');
   const [isCheckingForUpdates, setIsCheckingForUpdates] = useState(false);
   const [updateStatus, setUpdateStatus] = useState<string | null>(null);
 
@@ -297,7 +297,7 @@ function AboutSection() {
           {t('about.description')}
         </p>
         <p className="text-sm text-[var(--color-text-secondary)]">
-          {t('about.version', { version: appVersion })}
+          {t('about.version', { version: appVersion || '...' })}
         </p>
         <div className="flex items-center justify-center gap-4">
           <Button type="button" variant="link" onClick={() => void handleOpenReleaseNotes()}>
