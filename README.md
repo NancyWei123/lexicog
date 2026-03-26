@@ -20,6 +20,20 @@ Welcome. If you are trying LexiCog for the first time, start the app, open the `
 - configurable global shortcuts
 - English and Simplified Chinese UI
 
+## Download
+
+For macOS on Apple Silicon, download the DMG from the latest release.
+
+Since this project currently ships unsigned and non-notarized macOS builds, after copying `LexiCog.app` into `/Applications`, remove the quarantine flag manually in Terminal:
+
+```bash
+sudo xattr -rd com.apple.quarantine /Applications/LexiCog.app
+```
+
+Without this step, macOS may show "`LexiCog` is damaged and can't be opened".
+
+For other platforms, please build from source on your own machine.
+
 ## Build Requirements
 
 Before building, make sure you have:
@@ -31,7 +45,7 @@ For macOS builds, you should also have:
 - Xcode Command Line Tools
 - Swift toolchain available from Xcode
 
-## Install And Run
+## Build From Source
 
 ```bash
 npm install
@@ -43,17 +57,6 @@ To build a packaged app:
 ```bash
 npm run tauri build
 ```
-
-## macOS Install Note
-
-This project currently ships unsigned and non-notarized macOS builds. After copying `LexiCog.app` into `/Applications`, remove the quarantine flag manually:
-
-```bash
-sudo xattr -rd com.apple.quarantine /Applications/LexiCog.app
-```
-
-Without that step, macOS may show "`LexiCog` is damaged and can't be opened" for apps downloaded from GitHub Releases.
-
 
 ## First-Run Notes
 
