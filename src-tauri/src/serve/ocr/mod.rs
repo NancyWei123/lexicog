@@ -14,7 +14,6 @@ use base64::{engine::general_purpose, Engine as _};
 use tauri::{ipc::Channel, AppHandle, Emitter};
 use tokio::sync::{Mutex, RwLock};
 
-#[cfg(target_os = "macos")]
 use tokio::sync::oneshot;
 
 use tokio_util::sync::CancellationToken;
@@ -133,20 +132,6 @@ pub async fn serve_ocr(
         }
     }
 
-    /*
-     * Windows support:
-     * Windows does not use macos_builtin_ocr.
-     * It falls through to the configured model-based OCR below.
-     *
-     * This means your Windows app can compile and run, but OCR requires
-     * an OCR model/client to be configured in the app.
-     */
-    #[cfg(target_os = "windows")]
-    {
-        log::warn!(
-            "Windows does not support macOS built-in OCR. Falling back to configured OCR model."
-        );
-    }
 
     let model_id = ocr_model_state.read().await.id.clone().ok_or(format!(
         "{:#}",
